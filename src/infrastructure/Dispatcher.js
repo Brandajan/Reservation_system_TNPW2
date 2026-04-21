@@ -39,6 +39,15 @@ export const dispatch = (action) => {
             });
             break;
         }
+        case 'AUTH_LOGIN_SUCCESS': {
+            setState({ auth: { ...currentState.auth, user: action.payload.user } });
+            break;
+    }
+
+        case 'AUTH_LOGOUT': {
+            setState({ auth: { ...currentState.auth, user: null } });
+            break;
+    }
         //zde přidávat další akce
         default:
             console.warn(`Neznámá akce: ${action.type}`);
