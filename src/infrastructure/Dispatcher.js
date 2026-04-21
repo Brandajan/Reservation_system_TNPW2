@@ -30,7 +30,15 @@ export const dispatch = (action) => {
             });
             break;
         }
-
+        case "NAVIGATE" : {
+            setState({
+                navigation: {
+                    currentRoute: action.payload.route,
+                    activeId: action.payload.activeId
+                }
+            });
+            break;
+        }
         //zde přidávat další akce
         default:
             console.warn(`Neznámá akce: ${action.type}`);
