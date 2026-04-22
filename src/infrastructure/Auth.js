@@ -7,7 +7,7 @@ const STORAGE_KEY = "tnpw2_user_session";
 export const authService = {
     //simulace přihlášení
     login: (username, role) => {
-        const user ={username, role, id: Date.now()
+        const user ={username, role, id: Date.now() //na vytvoření unikátního id
         };
     
     //uložení do paměti
